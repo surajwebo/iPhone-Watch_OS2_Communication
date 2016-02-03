@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WatchOS2DemoWatchExt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>CEB54B0E1C61E21700D7F300</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CEB54B221C61E26100D7F300</key>
 		<dict>
 			<key>primary</key>
 			<true/>

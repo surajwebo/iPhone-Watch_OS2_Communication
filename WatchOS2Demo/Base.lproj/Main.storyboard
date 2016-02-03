@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,132 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDb-9n-obd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4ge-VJ-XTK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Send To Watch">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4ge-VJ-XTK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4ge-VJ-XTK"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMessageToPairedDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uq1-kS-aLN"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hK5-Gx-7eE">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9OP-SG-EAB">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="0-4"/>
+                                    <segment title="4-60"/>
+                                    <segment title="60+"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84O-7i-doC">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S5-V5-D2t">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6S5-V5-D2t" firstAttribute="leading" secondItem="84O-7i-doC" secondAttribute="leading" id="2i1-Gc-yB2"/>
+                            <constraint firstItem="9OP-SG-EAB" firstAttribute="leading" secondItem="84O-7i-doC" secondAttribute="trailing" constant="19" id="9QE-8C-kGh"/>
+                            <constraint firstItem="hK5-Gx-7eE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="81" id="AU0-WV-yAL"/>
+                            <constraint firstItem="9OP-SG-EAB" firstAttribute="trailing" secondItem="yDb-9n-obd" secondAttribute="trailing" id="F7R-oB-WcS"/>
+                            <constraint firstItem="9OP-SG-EAB" firstAttribute="top" secondItem="hK5-Gx-7eE" secondAttribute="bottom" constant="48" id="TGZ-gJ-JRy"/>
+                            <constraint firstItem="84O-7i-doC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YJr-Ux-7qQ"/>
+                            <constraint firstItem="hK5-Gx-7eE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aty-D1-yWG"/>
+                            <constraint firstItem="hK5-Gx-7eE" firstAttribute="bottom" secondItem="6S5-V5-D2t" secondAttribute="bottom" id="iwZ-z5-93u"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yDb-9n-obd" secondAttribute="bottom" constant="314" id="kGk-TK-J1s"/>
+                            <constraint firstItem="9OP-SG-EAB" firstAttribute="trailing" secondItem="hK5-Gx-7eE" secondAttribute="trailing" id="mhk-UM-zoL"/>
+                            <constraint firstItem="hK5-Gx-7eE" firstAttribute="leading" secondItem="9OP-SG-EAB" secondAttribute="leading" id="ovo-f9-L2p"/>
+                            <constraint firstItem="84O-7i-doC" firstAttribute="bottom" secondItem="9OP-SG-EAB" secondAttribute="bottom" id="q43-e1-wXk"/>
+                            <constraint firstItem="84O-7i-doC" firstAttribute="leading" secondItem="yDb-9n-obd" secondAttribute="leading" id="sp9-ZR-izB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yDb-9n-obd"/>
+                                <exclude reference="hK5-Gx-7eE"/>
+                                <exclude reference="9OP-SG-EAB"/>
+                                <exclude reference="84O-7i-doC"/>
+                                <exclude reference="6S5-V5-D2t"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2i1-Gc-yB2"/>
+                                <exclude reference="AU0-WV-yAL"/>
+                                <exclude reference="aty-D1-yWG"/>
+                                <exclude reference="iwZ-z5-93u"/>
+                                <exclude reference="ovo-f9-L2p"/>
+                                <exclude reference="YJr-Ux-7qQ"/>
+                                <exclude reference="q43-e1-wXk"/>
+                                <exclude reference="sp9-ZR-izB"/>
+                                <exclude reference="9QE-8C-kGh"/>
+                                <exclude reference="F7R-oB-WcS"/>
+                                <exclude reference="TGZ-gJ-JRy"/>
+                                <exclude reference="mhk-UM-zoL"/>
+                                <exclude reference="kGk-TK-J1s"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yDb-9n-obd"/>
+                                <include reference="hK5-Gx-7eE"/>
+                                <include reference="9OP-SG-EAB"/>
+                                <include reference="84O-7i-doC"/>
+                                <include reference="6S5-V5-D2t"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2i1-Gc-yB2"/>
+                                <include reference="AU0-WV-yAL"/>
+                                <include reference="aty-D1-yWG"/>
+                                <include reference="iwZ-z5-93u"/>
+                                <include reference="ovo-f9-L2p"/>
+                                <include reference="YJr-Ux-7qQ"/>
+                                <include reference="q43-e1-wXk"/>
+                                <include reference="sp9-ZR-izB"/>
+                                <include reference="9QE-8C-kGh"/>
+                                <include reference="F7R-oB-WcS"/>
+                                <include reference="TGZ-gJ-JRy"/>
+                                <include reference="mhk-UM-zoL"/>
+                                <include reference="kGk-TK-J1s"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnSendMessage" destination="yDb-9n-obd" id="aNX-Bo-IRR"/>
+                        <outlet property="segmentedCtrlAgeGroup" destination="9OP-SG-EAB" id="D4C-pl-D1H"/>
+                        <outlet property="segmentedCtrlGender" destination="hK5-Gx-7eE" id="XGU-nW-IbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="429"/>
         </scene>
     </scenes>
 </document>
