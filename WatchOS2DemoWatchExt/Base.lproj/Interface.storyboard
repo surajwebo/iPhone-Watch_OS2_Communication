@@ -18,12 +18,22 @@
                         </button>
                         <group width="1" alignment="center" layout="vertical" id="Ml8-92-Pde">
                             <items>
-                                <label width="134" alignment="center" text="Gender" textAlignment="left" id="u0h-r4-BOv">
-                                    <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </label>
-                                <label width="134" alignment="center" verticalAlignment="bottom" text="Age Group" textAlignment="left" id="oVJ-dt-rgt">
-                                    <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </label>
+                                <group width="1" alignment="left" id="bLG-ZJ-ioB">
+                                    <items>
+                                        <label alignment="left" text="Gender" textAlignment="left" id="b5u-hA-jZ6"/>
+                                        <label width="50" alignment="right" text="Gender" textAlignment="left" id="u0h-r4-BOv">
+                                            <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="c28-Ve-3OI">
+                                    <items>
+                                        <label alignment="left" text="Age Group" id="fDZ-Ou-lNo"/>
+                                        <label width="50" alignment="right" verticalAlignment="bottom" text="Age Group" textAlignment="left" id="oVJ-dt-rgt">
+                                            <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
